@@ -11,3 +11,8 @@ In the Cafe class I overloaded the constructor to allow quick actions in creatin
 - What worked, what didn't, what advice would you give someone taking this course in the future?
 
 I had a hard time figuring out when does the function run to which if statement in my `goToFloor()` overriding the one in the Building class. Furthermore, understanding which variable name is which value is important, as it could refer to the building's own metrics or the user specified number for an action. An advice would be to run and go through the output carefully, as sometimes things all run and prints but were wrong.
+
+
+Fixed:
+- Missing or inappropriate @param / @return in Javadoc
+- Formatting for multi-block statement.

@@ -5,7 +5,9 @@ public class CampusMap {
 
     ArrayList<Building> buildings;
 
-    /* Default constructor, initializes empty ArrayList */
+    /**
+     * Default constructor, initializes empty ArrayList
+     */
     public CampusMap() {
         buildings = new ArrayList<Building>();
     }
@@ -41,6 +43,9 @@ public class CampusMap {
         return mapString;
     }
 
+    /**
+     * Main method for testing the CampusMap class.
+     */
     public static void main(String[] args) {
         CampusMap myMap = new CampusMap();
 

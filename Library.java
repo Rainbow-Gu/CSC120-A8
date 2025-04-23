@@ -35,7 +35,7 @@ public class Library extends Building implements LibraryRequirements{
   /**
     * Removes the book from the collection
     * @param title book title to remove
-    * @return title removed, otherwise null
+    * @return title that is removed, otherwise null
     */
   public String removeTitle(String title) {
     if (collection.containsKey(title)) {
@@ -66,12 +66,12 @@ public class Library extends Building implements LibraryRequirements{
    * @param title the title of the book to return
    */
   public void returnBook(String title) {
-      if (collection.containsKey(title)) {
-        collection.replace(title, true);
-        System.out.println(title + " checked in.");
-      } else {
-        System.out.println(title + " doesn't exist in collection.");
-      }
+    if (collection.containsKey(title)) {
+      collection.replace(title, true);
+      System.out.println(title + " checked in.");
+    } else {
+      System.out.println(title + " doesn't exist in collection.");
+    }
   }
 
   /**
@@ -98,7 +98,8 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * Overload isAvailablele: checks if the book is available
-   * @param title the title to check
+   * @param titleOnly the title without author name to check
+   * @param author the author of the book
    * @return true if the title is currently available, false otherwise
    */
   public boolean isAvailable(String titleOnly, String author) {
@@ -110,8 +111,7 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * Checks if the book is available
-   * @param titleOnly the title without author name to check
-   * @param author the author of the book
+   * @param title the title to check
    * @return true if the title is currently available, false otherwise
    */
   public boolean isAvailable(String title) {
@@ -154,8 +154,7 @@ public class Library extends Building implements LibraryRequirements{
     if (!hasElevator && floorNum >= 1 && floorNum <= nFloors){
       if (floorNum == this.activeFloor) {
         System.out.println("You are already at " + floorNum + " floor.");
-      }
-      else if (floorNum == activeFloor + 1 || floorNum == activeFloor-1) {
+      } else if (floorNum == activeFloor + 1 || floorNum == activeFloor-1) {
         super.goToFloor(floorNum);
       } else {
         throw new RuntimeException("This building doesn't have an elevator. You must go one floor at a time.");

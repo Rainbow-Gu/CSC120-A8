@@ -73,7 +73,7 @@ public class House extends Building implements HouseRequirements {
   /** 
    * Remove a student from the list and return them
    * @param s the student/resident to move out
-   * @return s the student who had moved out
+   * @return s the student who wished to move out
    */
   public Student moveOut(Student s) {
     if (residents.contains(s)) {
